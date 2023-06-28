@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,11 +31,24 @@ class ImageViewer extends StatelessWidget {
       appBar: AppBar(
         title: Center(child: Text("Image Viewer")),
       ),
-      body: Center(
-          child: Image.asset(
-        "asset/Images/image.jpg",
-        width: 300,
-      )),
+      body: Column(
+        children: [
+          Image.asset(
+            "asset/images/image.jpg",
+            width: 400,
+          ),
+          Text(
+            "BEACH PICTURE",
+            textAlign: TextAlign.center,
+            style: GoogleFonts.inter(
+              textStyle: TextStyle(
+                color: Colors.brown,
+                fontSize: 40,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
